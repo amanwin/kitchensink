@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>User Details</title>
+  <link th:href = "@{/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <div class="row">
+<h1>User Details</h1>
+<p>Name: <span th:text="${members.name}"></span></p>
+<p>Email: <span th:text="${members.email}"></span></p>
+  </div>
+</div>
+</body>
+</html>
