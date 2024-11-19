@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User List</title>
+    <link th:href = "@{/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <h1>User List</h1>
+        <a href="/api/members/new">Create New Member</a>
+        <ul class="list-group">
+            <li th:each="member : ${members}" class="list-group-item">
+                <a th:href="@{/api/members/{id}(id=${member.id})}" th:text="${member.name}">User Name</a>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
